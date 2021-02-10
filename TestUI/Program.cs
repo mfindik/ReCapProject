@@ -9,11 +9,11 @@ namespace TestUI
     {
         static void Main(string[] args)
         {
-            //CarManager carManager = new CarManager(new InMemoryCarDal());
-            CarManager carManager = new CarManager(new EfCarDal());
+           CarManager carManager = new CarManager(new EfCarDal());
+
             foreach (var car in carManager.GetAll())
             {
-                Console.WriteLine(car.ModelYear);
+                Console.WriteLine(car.CarName + "/" + car.ColorId + "/" + car.BrandId);
             }
         }
     }
